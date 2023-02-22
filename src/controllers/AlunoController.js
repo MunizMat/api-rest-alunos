@@ -16,6 +16,7 @@ class AlunoController {
 
   async store(req, res) {
     try {
+      console.log(req.body);
       const aluno = await Aluno.create(req.body);
 
       return res.json(aluno);
